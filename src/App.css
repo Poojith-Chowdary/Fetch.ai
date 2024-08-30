@@ -16,11 +16,12 @@ body {
   max-width: 1100px;
   margin: 20px auto;
   padding: 25px;
-  border-radius: 12px;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(4px); /* Glassmorphism blur */
+  -webkit-backdrop-filter: blur(4px); /* Glassmorphism blur for WebKit browsers */
+  background: rgba(239, 239, 239, 0.2); /* Glassmorphism background */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glassmorphism shadow */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Glassmorphism border */
 }
 
 h2 {
@@ -34,15 +35,15 @@ h2 {
 }
 
 input, select, button {
-  width: 100%; /* Full width for better alignment with Bootstrap grid */
+  width: 100%;
   padding: 12px;
   margin: 10px 0;
   border-radius: 6px;
   border: 1px solid rgba(59, 59, 59, 0.2);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly transparent background for form elements */
   color: #3b3b3b;
   font-size: 16px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input::placeholder, select {
@@ -59,31 +60,43 @@ input:focus, select:focus {
 
 button {
   cursor: pointer;
-  background: #39697c;
-  color: #fff;
   font-weight: 600;
+  border: 1px solid rgba(59, 59, 59, 0.1);
+  background: #39697c; /* Default button color */
+  color: #fff; /* White text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow for a subtler look */
+  padding: 8px 16px; /* Decreased padding for a slimmer appearance */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background: #478b93;
   transform: translateY(-2px);
+  background-color: #478b93; /* Hover color for buttons */
+}
+
+/* Specific styles for table buttons */
+table button {
+  background: #39697c; /* Default color for table buttons */
+  border: 1px solid rgba(59, 59, 59, 0.2); /* Light border */
+  color: #fff; /* White text color */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  padding: 6px 12px; /* Reduced padding for a slimmer look */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.703);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  color: #3b3b3b;
+  backdrop-filter: blur(4px); /* Glassmorphism blur */
+  -webkit-backdrop-filter: blur(4px); /* Glassmorphism blur for WebKit browsers */
+  background: rgba(239, 239, 239, 0.2); /* Glassmorphism background */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glassmorphism shadow */
   border-radius: 10px;
   overflow: hidden; /* Ensure the rounded corners apply */
 }
 
 table thead {
-  background: rgba(119, 116, 96, 0.774);
+  background:  rgba(2, 64, 126, 0.8);  /* Light background for the header */
   color: #fff;
   text-transform: uppercase;
 }
@@ -91,21 +104,39 @@ table thead {
 table th, table td {
   padding: 14px;
   text-align: left;
-  border-bottom: 1px solid rgba(59, 59, 59, 0.1);
+  border-bottom: 1px solid rgba(59, 59, 59, 0.2); /* Light bottom border for separation */
+}
+
+table tr {
+  border-bottom: 1px solid rgba(59, 59, 59, 0.1); /* Light border between rows */
+}
+
+table thead:hover {
+  background: rgba(0, 113, 179, 0.9); /* Darker background color on hover for the entire header row */
 }
 
 table tr:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(131, 131, 131, 0.3); /* Slightly different background on hover */
+}
+
+table td, table th {
+  border-right: 1px solid rgba(59, 59, 59, 0.2); /* Vertical border between columns */
+}
+
+table th:last-child, table td:last-child {
+  border-right: none; /* Remove right border from the last column */
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Distribute space between brand and menu */
+  justify-content: space-between;
   align-items: center;
   padding: 12px 25px;
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px); /* Glassmorphism blur */
+  -webkit-backdrop-filter: blur(4px); /* Glassmorphism blur for WebKit browsers */
+  background: rgba(239, 239, 239, 0.2); /* Glassmorphism background */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glassmorphism shadow */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Glassmorphism border */
   border-radius: 10px;
 }
 
@@ -128,12 +159,12 @@ table tr:hover {
   text-decoration: none;
   padding: 10px 18px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4); /* Slightly transparent background for glass effect */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .navbar a:hover, .navbar button:hover {
-  background: rgb(205, 106, 106);
+  background: rgb(255, 108, 108);
   transform: translateY(-2px);
 }
 

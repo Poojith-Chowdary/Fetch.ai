@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './ToastStyles.css';
 
 
 const AgentDashboard = () => {
@@ -73,7 +74,7 @@ const AgentDashboard = () => {
                     <Line type="monotone" dataKey="executionTime" stroke="#8884d8" />
                     <CartesianGrid stroke="#ccc" />
                     <XAxis dataKey="agent" />
-                    <YAxis label={{ value: 'Execution Time (minutes)', angle: -90, position: 'insideLeft' }} />
+                    <YAxis label={{ value: 'Execution Time (minutes)', angle: -90, position: 'centre' }} />
                     <Tooltip />
                     <Legend />
                 </LineChart>

@@ -1,0 +1,49 @@
+.Toastify__toast {
+    border-radius: 18px; /* Rounded corners for toast */
+    background: rgba(0, 0, 0, 0.8); /* Dark background for toast */
+    color: #fff; /* White text color */
+    font-size: 17px; /* Adjust font size */
+  }
+  
+  .Toastify__toast--success {
+    background: rgba(102, 102, 102, 0.9); /* Success background color */
+  }
+  
+  .Toastify__toast--error {
+    background: rgba(102, 102, 102, 0.9); /* Error background color */
+  }
+  
+  .Toastify__toast-body {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Toastify__progress-bar {
+    height: 4px; /* Slim progress bar */
+  }
+  .Toastify__close-button {
+    font-size: 16px; /* Adjust size of the "X" */
+    width: 20px; /* Adjust width of the button */
+    height: 40px; /* Adjust height of the button */
+    padding: -10; /* Remove default padding */
+    margin: -0; /* Remove default margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(0%); /* Adjust vertical alignment */
+  }
+  
+  .Toastify__close-button > svg {
+    width: 16px; /* Adjust width of the "X" symbol */
+    height: 17px; /* Adjust height of the "X" symbol */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Toastify__close-button:hover {
+    background: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent color on hover */
+  }

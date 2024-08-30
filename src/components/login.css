@@ -1,0 +1,26 @@
+/* login.css */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-input {
+    width: 80%; /* Adjust this value to control width */
+    max-width: 30px; /* Maximum width */
+    margin: 10px 0; /* Vertical spacing between elements */
+    padding: 10px; /* Space inside the input */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.login-button {
+    width: 80%; /* Match input width */
+    max-width: 300px; /* Match input max-width */
+    margin: 10px 0; /* Vertical spacing */
+    padding: 10px 20px; /* Space inside the button */
+}
