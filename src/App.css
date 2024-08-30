@@ -1,0 +1,151 @@
+/* Updated App.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #8ae8b5, #4aa0b2);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3b3b3b;
+}
+
+.container {
+  align-content: center;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3b3b3b;
+  font-weight: 700;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+input, select, button {
+  width: 100%; /* Full width for better alignment with Bootstrap grid */
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid rgba(59, 59, 59, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #3b3b3b;
+  font-size: 16px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input::placeholder, select {
+  color: #5c5c5c;
+  opacity: 0.9;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background: rgba(209, 196, 163, 0.4);
+  border: 1px solid rgba(209, 196, 163, 0.8);
+  box-shadow: 0 0 8px rgba(209, 196, 163, 0.5); /* Soft shadow to indicate focus */
+}
+
+button {
+  cursor: pointer;
+  background: #39697c;
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #478b93;
+  transform: translateY(-2px);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.703);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #3b3b3b;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the rounded corners apply */
+}
+
+table thead {
+  background: rgba(119, 116, 96, 0.774);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+table th, table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(59, 59, 59, 0.1);
+}
+
+table tr:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between brand and menu */
+  align-items: center;
+  padding: 12px 25px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.navbar h1 {
+  color: #522f52;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar a, .navbar button {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover, .navbar button:hover {
+  background: rgb(205, 106, 106);
+  transform: translateY(-2px);
+}
+
+.container p, .container td {
+  color: #3b3b3b;
+}
+
+input, select, button {
+  text-align: left;
+}
+
+.container h2, .container button {
+  margin: 20px auto;
+  text-align: center;
+}
